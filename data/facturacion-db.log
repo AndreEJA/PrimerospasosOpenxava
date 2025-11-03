@@ -1,0 +1,10 @@
+/*C5*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C6*/SET SCHEMA PUBLIC
+create table Producto (numero integer not null, descripcion varchar(50), primary key (numero))
+INSERT INTO PRODUCTO VALUES(1,'Helado')
+COMMIT
+INSERT INTO PRODUCTO VALUES(2,'Papel higienico')
+COMMIT
+INSERT INTO PRODUCTO VALUES(3,'bolsas de basura')
+COMMIT
