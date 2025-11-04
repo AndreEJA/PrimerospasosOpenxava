@@ -11,6 +11,7 @@ import org.openxava.calculators.*;
 import lombok.*;
 
 @Entity @Getter @Setter
+@View(members = "anyo, numero, fecha;"+ "cliente;" + "detalles;" + "observaciones")
 public class Factura {
 
     @Id
@@ -33,6 +34,7 @@ public class Factura {
     LocalDate fecha;
 
     @ManyToOne(fetch=FetchType.LAZY, optional=false) // El cliente es obligatorio
+    @ReferenceView("Simple")
     Cliente cliente;
 
     @ElementCollection
